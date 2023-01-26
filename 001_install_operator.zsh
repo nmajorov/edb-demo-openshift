@@ -6,7 +6,11 @@
 
 DIRNAME=`dirname "$0"`
 
+
+# prepare namespace
+
 export NAMESPACE="edb-demo"
+
 
 echo "show current user"
 echo "using project $NAMESPACE"
@@ -19,7 +23,9 @@ oc new-project $NAMESPACE
 echo "change to project"
 oc project $NAMESPACE
 
-#
+
+
+# install operator with a cli
 # see more info https://docs.openshift.com/container-platform/4.12/operators/admin/olm-adding-operators-to-cluster.html
 #
 echo "install operator"
